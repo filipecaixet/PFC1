@@ -1,13 +1,12 @@
-#include <sensordedistancia.h>
+#include <sensordecor.h>
 
 void setup() {
   // put your setup code here, to run once:
-inicializaInfra();
+inicializaSensor();
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-imprimeEstado();
+detectaCor();
 delay(1000);
 }
-

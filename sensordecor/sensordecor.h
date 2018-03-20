@@ -1,19 +1,12 @@
-/*
- sensordecor.h
+#ifndef sensordecor_h
+#define sensordecor_h
 
- Autor: Filipe Caixeta
- 
- */
+#include "Arduino.h"
 
- #ifndef sensordecor_h
- #define sensordecor_h
+void inicializaSensor();
 
- #include "Arduino.h"
+char detectaCor();
 
- void inicializaSensor();
+void color();
 
- char detectaCor();
-
- void color();
-
- #endif
+#endif
