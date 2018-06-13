@@ -73,3 +73,4 @@ void color()
 
   verde = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
 }
+
