@@ -3,20 +3,22 @@
 
 void inicializaInfra()
 {
-  pinMode( 7, INPUT);
+  pinMode(2, INPUT);
   Serial.begin(9600);
 }
 
-void imprimeEstado()
+int imprimeEstado()
 {
-  if (( ( digitalRead(7) ) == ( HIGH ) ))
+  if (( ( digitalRead(2) ) == ( HIGH ) ))
   {
     Serial.print("DESATIVADO");
     Serial.println();
+    return 0;
   }
   else
   {
     Serial.print("ATIVADO");
     Serial.println();
+    return 1;
   }
 }
