@@ -5,6 +5,6 @@
 
 void inicializaInfra();
 
-void imprimeEstado();
+int imprimeEstado();
 
 #endif
