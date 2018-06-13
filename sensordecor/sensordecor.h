@@ -10,3 +10,4 @@ char detectaCor();
 void color();
 
 #endif
+
