@@ -42,12 +42,12 @@ Serial.print(" Azul: ");
 Serial.print(azul, DEC);
 Serial.println();
 
-if(vermelho <= azul && vermelho < verde)
+if(vermelho <= azul && vermelho < verde && vermelho <= 25)
   {
   Serial.print("VERMELHO DETECTADO");
   return vm;
   }
-else if(azul < vermelho && azul < verde && azul < 40)
+else if(azul < vermelho && azul < verde && azul < 25)
   {
   Serial.print("AZUL DETECTADO");
   return az;
