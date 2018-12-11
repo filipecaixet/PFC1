@@ -5,9 +5,10 @@
 
 void inicializaSensor();
 
-char detectaCor();
+int detectaCor();
+
+void imprimeCor();
 
 void color();
 
 #endif
-
