@@ -1,4 +1,4 @@
-Leia
+LEIA
 
 Este documento descreve o modo de utilização dos códigos desenvolvidos no Projeto Final de Curso do aluno Filipe Augusto Azevedo Caixeta, intitulado "Desenvolvimento de uma planta didática para ensino de controle de sistemas a eventos discretos".
 
