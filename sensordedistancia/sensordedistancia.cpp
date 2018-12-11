@@ -1,24 +1,39 @@
 #include "Arduino.h"
 #include "sensordedistancia.h"
 
-void inicializaInfra()
+void inicializaInfra(int pin)
 {
-  pinMode(2, INPUT);
+  pinMode(pin, INPUT);
   Serial.begin(9600);
 }
 
-int imprimeEstado()
+int estado(int pin)
 {
-  if (( ( digitalRead(2) ) == ( HIGH ) ))
+  if (( ( digitalRead(pin) ) == ( HIGH ) ))
   {
-    Serial.print("DESATIVADO");
-    Serial.println();
     return 0;
   }
   else
   {
-    Serial.print("ATIVADO");
-    Serial.println();
+    //Serial.print(sensores[pin] );
     return 1;
   }
 }
+
+void imprimeEstado(int pin)
+{
+
+  if (( ( digitalRead(pin) ) == ( HIGH ) ))
+  {
+    Serial.print(pin);
+    Serial.print(" DESATIVADO");
+    Serial.println();
+  }
+  else
+  {
+    //Serial.print(sensores[pin] );
+    Serial.print(pin);
+    Serial.print(" ATIVADO");
+    Serial.println();
+  }
+} 
