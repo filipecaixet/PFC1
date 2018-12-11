@@ -5,15 +5,11 @@ int vermelho = 0;
 int azul = 0;
 int verde = 0;
 
-char vm;
-char az;
-char vd;
-
-const int s0 = 8;
-const int s1 = 9;
-const int s2 = 12;
-const int s3 = 11;
-const int out = 10;
+const int s0 = 50;
+const int s1 = 53;
+const int s2 = 51;
+const int s3 = 49;
+const int out = 47;
 
 void inicializaSensor()
 { 
@@ -29,8 +25,28 @@ digitalWrite(s0, HIGH);
 digitalWrite(s1, HIGH);
 }
 
-char detectaCor()
+int detectaCor()
 {
+color();
+
+if((vermelho < azul) && (vermelho < verde) && (vermelho <= 25))
+  {
+  return 10; //vermelho
+  }
+else if(azul < vermelho && azul < verde && azul <= 22)
+  {
+  return 20; //azul
+  }
+else if(verde < vermelho && verde < azul)
+  {
+  return 30; //verde
+  }
+
+}
+
+void imprimeCor()
+{
+
 color();
 
 Serial.println();
@@ -42,23 +58,20 @@ Serial.print(" Azul: ");
 Serial.print(azul, DEC);
 Serial.println();
 
-if(vermelho <= azul && vermelho < verde && vermelho <= 25)
+if(vermelho < azul && vermelho < verde && vermelho <= 25)
   {
   Serial.print("VERMELHO DETECTADO");
-  return vm;
   }
-else if(azul < vermelho && azul < verde && azul < 25)
+else if(azul < vermelho && azul < verde && azul <= 22)
   {
   Serial.print("AZUL DETECTADO");
-  return az;
   }
-else if(verde < vermelho && verde < azul)
+else if(verde < vermelho && verde < azul && verde <= 22)
   {
   Serial.print("VERDE DETECTADO");
-  return vd;
   }
-
 }
+
 
 void color()
 {
@@ -73,4 +86,3 @@ void color()
 
   verde = pulseIn(out, digitalRead(out) == HIGH ? LOW : HIGH);
 }
-
