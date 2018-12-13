@@ -73,7 +73,10 @@ CÓDIGOS:
 
         Link:
         https://drive.google.com/file/d/1x47TE2N17LwiP1TocuHjLZG-8sgmrfwK/view?usp=sharing
-
+        
+        Passo 0:
+                - Habilitar o modo "Desenvolvedor" no seu smartphone com sistema operacional Android. 
+                Para isso, vá em "Configurações", clique em "Opções de desenvolvedor" e "Ativar".
         Passo 1:
                 - Copiar e colar o link acima no navegador do seu smartphone com sistema operacional Android.
         Passo 2:
